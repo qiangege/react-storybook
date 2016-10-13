@@ -1,6 +1,6 @@
 'use strict';
 
-var _storybookUi = require('@kadira/storybook-ui');
+var _storybookUi = require('@qiangege/storybook-ui');
 
 var _storybookUi2 = _interopRequireDefault(_storybookUi);
 

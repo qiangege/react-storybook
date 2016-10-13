@@ -36,7 +36,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _storybookUi = require('@kadira/storybook-ui');
+var _storybookUi = require('@qiangege/storybook-ui');
 
 var _storybookAddons = require('@kadira/storybook-addons');
 

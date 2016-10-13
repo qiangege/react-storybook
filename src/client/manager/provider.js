@@ -4,7 +4,7 @@
 import UUID from 'uuid';
 import qs from 'qs';
 import React from 'react';
-import { Provider } from '@kadira/storybook-ui';
+import { Provider } from '@qiangege/storybook-ui';
 import addons from '@kadira/storybook-addons';
 import createChannel from '@kadira/storybook-channel-postmsg';
 import Preview from './preview';

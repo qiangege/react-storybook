@@ -24,7 +24,7 @@ exports.default = function (context) {
   };
 };
 
-var _key_events = require('@kadira/storybook-ui/dist/libs/key_events');
+var _key_events = require('@qiangege/storybook-ui/dist/libs/key_events');
 
 var _key_events2 = _interopRequireDefault(_key_events);
 
