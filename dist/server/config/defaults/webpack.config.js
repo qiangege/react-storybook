@@ -24,6 +24,13 @@ module.exports = function (storybookBaseConfig) {
     include: _utils.includePaths,
     loaders: [require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('postcss-loader')]
   }, {
+    test: /\.scss$/,
+    loader: "style!css!sass?sourceMap",
+    // exclude: /node_modules/,
+    // exclude是指在执行webpack大宝的时候，想要忽略的目录，
+    // 而我们在从node_modules中引入组件展示的时候，样式肯定是在node_modules中,所以node_module不能够忽略过去
+    include: _utils.includePaths
+  }, {
     test: /\.json$/,
     include: _utils.includePaths,
     loader: require.resolve('json-loader')
@@ -50,7 +57,7 @@ module.exports = function (storybookBaseConfig) {
     })];
   };
 
-  newConfig.resolve.extensions = ['.js', '.json', ''];
+  newConfig.resolve.extensions = ['.js', '.json', 'scss'];
   newConfig.resolve.alias = (0, _extends3.default)({}, storybookBaseConfig.resolve.alias, {
     // This is to support NPM2
     'babel-runtime/regenerator': require.resolve('babel-runtime/regenerator')

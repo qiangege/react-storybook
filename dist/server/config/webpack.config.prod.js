@@ -41,6 +41,13 @@ exports.default = function () {
         query: _babelProd2.default,
         include: _utils.includePaths,
         exclude: _utils.excludePaths
+      }, {
+        test: /\.scss$/,
+        loader: "style!css!sass?sourceMap",
+        // exclude: /node_modules/,
+        // exclude是指在执行webpack大宝的时候，想要忽略的目录，
+        // 而我们在从node_modules中引入组件展示的时候，样式肯定是在node_modules中,所以node_module不能够忽略过去
+        include: _utils.includePaths
       }]
     },
     resolve: {

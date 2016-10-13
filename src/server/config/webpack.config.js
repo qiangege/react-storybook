@@ -47,6 +47,14 @@ export default function () {
           include: includePaths,
           exclude: excludePaths,
         },
+         {
+                test: /\.scss$/,
+                loader: "style!css!sass?sourceMap",
+                // exclude: /node_modules/,
+                // exclude是指在执行webpack大宝的时候，想要忽略的目录，
+                // 而我们在从node_modules中引入组件展示的时候，样式肯定是在node_modules中,所以node_module不能够忽略过去
+                include: includePaths
+            },
       ],
     },
     resolve: {
